@@ -11,27 +11,37 @@
 |
 */
 
-Route::get('/', function () {
-    $page_name = 'Home Page';
-    return view('welcome', compact('page_name'));
-});
+//Route::get('/', 'TasksController@welcome');
+Route::get('mytasks', 'TasksController@index');
 
-Route::get('aboutus', function () {
-    $page_name = 'About Us';
-    return view('about', compact('page_name'));
-});
 
-Route::get('with', function () {
-    return view('with')->with('name', 'world');
-});
+//Route::get('/tasks/{task}', 'TasksController@show');
 
-Route::get('tasks', function () {
-    $page_name = 'Tasks';
-    return view('tasks', [
-        'page_name' => $page_name,
-        'task1' => 'action 1',
-        'task2' => 'action 2',
-        'task3' => 'action 3',
-        'task4' => 'action 4'
-    ]);
-});
+//Route::get('/tasks', 'TasksController@index');
+
+//Route::get('mytasks', function () {
+//    $page_name = 'My Tasks';
+//    return view('welcome', compact('page_name'));
+//});
+
+//Route::get('/', function () {
+//    $page_name = 'Home Page';
+//    return view('welcome', compact('page_name'));
+//});
+//Route::get('aboutus', function () {
+//    $page_name = 'About Us';
+//    return view('about', compact('page_name'));
+//});
+//Route::get('with', function () {
+//    return view('with')->with('name', 'world');
+//});
+//Route::get('tasks', function () {
+//    $page_name = 'Tasks';
+//    return view('tasks', [
+//        'page_name' => $page_name,
+//        'task1' => 'action 1',
+//        'task2' => 'action 2',
+//        'task3' => 'action 3',
+//        'task4' => 'action 4'
+//    ]);
+//});
